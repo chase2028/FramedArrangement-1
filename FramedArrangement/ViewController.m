@@ -103,6 +103,30 @@
     return y;
 }
 
-
+- (int)layoutVerticalRectangles {
+    CGRect frame = [UIScreen mainScreen].bounds;
+    CGRect part1;
+    CGRect part2;
+    CGRect frame1;
+    CGRect frame2;
+    CGRect frame3;
+    CGRect frame4;
+    CGRectDivide(frame, &part1, &part2, CGRectGetMaxY(frame), CGRectMaxXEdge);
+    CGRectDivide(part1, &frame1, &frame2, CGRectGetMaxY(part1), CGRectMaxXEdge);
+    CGRectDivide(part2, &frame3, &frame4, CGRectGetMaxY(part2), CGRectMaxXEdge);
+    
+    _redView = [[UIView alloc] initWithFrame:frame1];
+    _blueView = [[UIView alloc] initWithFrame:frame2];
+    _greenView = [[UIView alloc] initWithFrame:frame3];
+    _yellowView = [[UIView alloc] initWithFrame:frame4];
+    
+    int width = frame1.size.width;
+    int height = frame1.size.height;
+    int x = frame1.origin.x;
+    
+    return width;
+    return height;
+    return x;
+}
 
 @end
