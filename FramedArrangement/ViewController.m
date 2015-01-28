@@ -129,4 +129,38 @@
     return x;
 }
 
+- (int)layoutDiagonalSquares {
+    int width = [UIScreen mainScreen].bounds.size.width / 4;
+    int height = [UIScreen mainScreen].bounds.size.height / 4;
+    CGRect frame1 = CGRectMake(0, 0, width, height);
+    CGRect frame2 = CGRectMake(width, height, width, height);
+    CGRect frame3 = CGRectMake(width * 2, height * 2, width, height);
+    CGRect frame4 = CGRectMake(width * 3, height * 3, width, height);
+    
+    _redView = [[UIView alloc] initWithFrame:frame1];
+    _blueView = [[UIView alloc] initWithFrame:frame2];
+    _greenView = [[UIView alloc] initWithFrame:frame3];
+    _yellowView = [[UIView alloc] initWithFrame:frame4];
+    
+    int xOne = frame1.origin.x;
+    int yOne = frame1.origin.y;
+    int xTwo = frame2.origin.x;
+    int yTwo = frame2.origin.y;
+    int xThree = frame3.origin.x;
+    int yThree = frame3.origin.y;
+    int xFour = frame4.origin.x;
+    int yFour = frame4.origin.y;
+    
+    return width;
+    return height;
+    return xOne;
+    return yOne;
+    return xTwo;
+    return yTwo;
+    return xThree;
+    return yThree;
+    return xFour;
+    return yFour;
+}
+
 @end
